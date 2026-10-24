@@ -1,0 +1,37 @@
+{
+  "name": "BillCipherExtension",
+  "version": "1.0.0",
+  "author": "The All Seeing Eye",
+  "url": "https://github.com/Yoshiro2017/BillCipherExtension",
+  "descriptionmsg": "billcipher-desc",
+  "license-name": "MIT",
+  "type": "other",
+  "manifest_version": 2,
+  "MessagesDirs": {
+    "BillCipherExtension": [
+      "i18n"
+    ]
+  },
+  "AutoloadClasses": {
+    "MediaWiki\\Extension\\BillCipherExtension\\BillCipherHooks": "includes/BillCipherHooks.php"
+  },
+  "HookHandlers": {
+    "BillCipherHooks": {
+      "class": "MediaWiki\\Extension\\BillCipherExtension\\BillCipherHooks"
+    }
+  },
+  "Hooks": {
+    "ParserFirstCallInit": "BillCipherHooks",
+    "BeforePageDisplay": "BillCipherHooks"
+  },
+  "ResourceModules": {
+    "ext.billcipher": {
+      "styles": "resources/ext.billcipher.css",
+      "scripts": "resources/ext.billcipher.js",
+      "targets": [
+        "desktop",
+        "mobile"
+      ]
+    }
+  }
+}
