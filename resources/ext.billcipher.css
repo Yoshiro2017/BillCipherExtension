@@ -1,0 +1,38 @@
+/* Golden Deal Box Styling */
+.bill-cipher-deal-box {
+    background: linear-gradient(135deg, #111111 0%, #2a2000 100%);
+    border: 3px solid #ffd700;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #ffd700;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.bill-eye {
+    font-size: 40px;
+    animation: floatEye 3s ease-in-out infinite;
+}
+
+.bill-deal-btn {
+    background-color: #ffd700;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.bill-deal-btn:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+@keyframes floatEye {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
