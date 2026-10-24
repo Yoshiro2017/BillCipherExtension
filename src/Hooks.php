@@ -24,7 +24,8 @@ class Hooks {
         $html .= '<div class="bill-eye">👁️</div>';
         $html .= '<h3>A Deal Has Been Proposed!</h3>';
         $html .= '<p>' . $offer . '</p>';
-        $html .= '<button class="bill-deal-btn" onclick="makeBillCipherDeal()">Shake My Hand</button>';
+        // Added explicit global function call back so onclick works perfectly
+        $html .= '<button class="bill-deal-btn" type="button" onclick="makeBillCipherDeal()">Shake My Hand</button>';
         $html .= '</div>';
 
         return $html;
