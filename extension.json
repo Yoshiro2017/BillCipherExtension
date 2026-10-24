@@ -45,7 +45,7 @@
 			"styles": [
 				"ext.billcipher.css"
 			],
-			"packageFiles": [
+			"scripts": [
 				"ext.billcipher.js"
 			],
 			"messages": []
