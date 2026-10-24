@@ -6,7 +6,7 @@ use OutputPage;
 use Parser;
 use Skin;
 
-class BillCipherHooks {
+class Hooks {
 
     /**
      * Registers <deal> tag with MediaWiki Parser
