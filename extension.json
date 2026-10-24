@@ -1,37 +1,55 @@
 {
-  "name": "BillCipherExtension",
-  "version": "1.0.0",
-  "author": "The All Seeing Eye",
-  "url": "https://github.com/Yoshiro2017/BillCipherExtension",
-  "descriptionmsg": "billcipher-desc",
-  "license-name": "MIT",
-  "type": "other",
-  "manifest_version": 2,
-  "MessagesDirs": {
-    "BillCipherExtension": [
-      "i18n"
-    ]
-  },
-  "AutoloadClasses": {
-    "MediaWiki\\Extension\\BillCipherExtension\\BillCipherHooks": "includes/BillCipherHooks.php"
-  },
-  "HookHandlers": {
-    "BillCipherHooks": {
-      "class": "MediaWiki\\Extension\\BillCipherExtension\\BillCipherHooks"
-    }
-  },
-  "Hooks": {
-    "ParserFirstCallInit": "BillCipherHooks",
-    "BeforePageDisplay": "BillCipherHooks"
-  },
-  "ResourceModules": {
-    "ext.billcipher": {
-      "styles": "resources/ext.billcipher.css",
-      "scripts": "resources/ext.billcipher.js",
-      "targets": [
-        "desktop",
-        "mobile"
-      ]
-    }
-  }
+	"name": "BillCipherExtension",
+	"author": [
+		"The All Seeing Eye"
+	],
+	"url": "https://miraheze.org",
+	"descriptionmsg": "billcipher-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.45.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\BillCipherExtension\\": "src/"
+	},
+	"config": {
+		"BillCipherEnableDealBox": {
+			"description": "Enables the dimensional deal-making feature.",
+			"value": true
+		},
+		"BillCipherVandalizeReality": {
+			"description": "Allows Bill Cipher to alter background colors upon a handshake.",
+			"value": true
+		}
+	},
+	"HookHandlers": {
+		"BillCipherHooks": {
+			"class": "MediaWiki\\Extension\\BillCipherExtension\\Hooks"
+		}
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "BillCipherHooks",
+		"BeforePageDisplay": "BillCipherHooks"
+	},
+	"MessagesDirs": {
+		"BillCipherExtension": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.billcipher": {
+			"localBasePath": "resources",
+			"remoteExtPath": "BillCipherExtension/resources",
+			"dependencies": [],
+			"styles": [
+				"ext.billcipher.css"
+			],
+			"packageFiles": [
+				"ext.billcipher.js"
+			],
+			"messages": []
+		}
+	},
+	"manifest_version": 2
 }
